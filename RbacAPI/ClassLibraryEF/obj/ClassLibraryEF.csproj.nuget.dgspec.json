@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\23328\\Desktop\\Rbac\\RbacAPI\\ClassLibraryEF\\ClassLibraryEF.csproj": {}
+    "C:\\Users\\23328\\Desktop\\rbac上传\\RbacAPI\\ClassLibraryEF\\ClassLibraryEF.csproj": {}
   },
   "projects": {
-    "C:\\Users\\23328\\Desktop\\Rbac\\RbacAPI\\ClassLibraryEF\\ClassLibraryEF.csproj": {
+    "C:\\Users\\23328\\Desktop\\rbac上传\\RbacAPI\\ClassLibraryEF\\ClassLibraryEF.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\23328\\Desktop\\Rbac\\RbacAPI\\ClassLibraryEF\\ClassLibraryEF.csproj",
+        "projectUniqueName": "C:\\Users\\23328\\Desktop\\rbac上传\\RbacAPI\\ClassLibraryEF\\ClassLibraryEF.csproj",
         "projectName": "ClassLibraryEF",
-        "projectPath": "C:\\Users\\23328\\Desktop\\Rbac\\RbacAPI\\ClassLibraryEF\\ClassLibraryEF.csproj",
+        "projectPath": "C:\\Users\\23328\\Desktop\\rbac上传\\RbacAPI\\ClassLibraryEF\\ClassLibraryEF.csproj",
         "packagesPath": "C:\\Users\\23328\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\23328\\Desktop\\Rbac\\RbacAPI\\ClassLibraryEF\\obj\\",
+        "outputPath": "C:\\Users\\23328\\Desktop\\rbac上传\\RbacAPI\\ClassLibraryEF\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

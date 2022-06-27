@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "d+lw90ZhyureFU7y+wuJCYKNGmxZ2lc0YVrvMnIyEbR3czawhsaqBsa5ive8Sy/KUL85P7j4ip0rtaFyu5MZ9Q==",
+  "dgSpecHash": "EjYw+fbzvVj2qKm/CXCApvNWZ9iOIZNuhoQjKvNAfHNd9pt7Bu0Xr6R+iq0ndsgwQ9/Pur3oX8FkdhJKNJIPGg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\23328\\Desktop\\Rbac\\RbacAPI\\Repository\\Repository.csproj",
+  "projectFilePath": "C:\\Users\\23328\\Desktop\\rbac上传\\RbacAPI\\Repository\\Repository.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\23328\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",

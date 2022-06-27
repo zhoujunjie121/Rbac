@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\23328\\Desktop\\Rbac\\RbacAPI\\RbacAPI\\RbacAPI.csproj": {}
+    "C:\\Users\\23328\\Desktop\\rbac上传\\RbacAPI\\RbacAPI\\RbacAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\23328\\Desktop\\Rbac\\RbacAPI\\Application\\Application.csproj": {
+    "C:\\Users\\23328\\Desktop\\rbac上传\\RbacAPI\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\23328\\Desktop\\Rbac\\RbacAPI\\Application\\Application.csproj",
+        "projectUniqueName": "C:\\Users\\23328\\Desktop\\rbac上传\\RbacAPI\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Users\\23328\\Desktop\\Rbac\\RbacAPI\\Application\\Application.csproj",
+        "projectPath": "C:\\Users\\23328\\Desktop\\rbac上传\\RbacAPI\\Application\\Application.csproj",
         "packagesPath": "C:\\Users\\23328\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\23328\\Desktop\\Rbac\\RbacAPI\\Application\\obj\\",
+        "outputPath": "C:\\Users\\23328\\Desktop\\rbac上传\\RbacAPI\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -31,11 +31,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\23328\\Desktop\\Rbac\\RbacAPI\\ClassLibraryEF\\ClassLibraryEF.csproj": {
-                "projectPath": "C:\\Users\\23328\\Desktop\\Rbac\\RbacAPI\\ClassLibraryEF\\ClassLibraryEF.csproj"
+              "C:\\Users\\23328\\Desktop\\rbac上传\\RbacAPI\\ClassLibraryEF\\ClassLibraryEF.csproj": {
+                "projectPath": "C:\\Users\\23328\\Desktop\\rbac上传\\RbacAPI\\ClassLibraryEF\\ClassLibraryEF.csproj"
               },
-              "C:\\Users\\23328\\Desktop\\Rbac\\RbacAPI\\Repository\\Repository.csproj": {
-                "projectPath": "C:\\Users\\23328\\Desktop\\Rbac\\RbacAPI\\Repository\\Repository.csproj"
+              "C:\\Users\\23328\\Desktop\\rbac上传\\RbacAPI\\Repository\\Repository.csproj": {
+                "projectPath": "C:\\Users\\23328\\Desktop\\rbac上传\\RbacAPI\\Repository\\Repository.csproj"
               }
             }
           }
@@ -78,14 +78,14 @@
         }
       }
     },
-    "C:\\Users\\23328\\Desktop\\Rbac\\RbacAPI\\ClassLibraryEF\\ClassLibraryEF.csproj": {
+    "C:\\Users\\23328\\Desktop\\rbac上传\\RbacAPI\\ClassLibraryEF\\ClassLibraryEF.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\23328\\Desktop\\Rbac\\RbacAPI\\ClassLibraryEF\\ClassLibraryEF.csproj",
+        "projectUniqueName": "C:\\Users\\23328\\Desktop\\rbac上传\\RbacAPI\\ClassLibraryEF\\ClassLibraryEF.csproj",
         "projectName": "ClassLibraryEF",
-        "projectPath": "C:\\Users\\23328\\Desktop\\Rbac\\RbacAPI\\ClassLibraryEF\\ClassLibraryEF.csproj",
+        "projectPath": "C:\\Users\\23328\\Desktop\\rbac上传\\RbacAPI\\ClassLibraryEF\\ClassLibraryEF.csproj",
         "packagesPath": "C:\\Users\\23328\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\23328\\Desktop\\Rbac\\RbacAPI\\ClassLibraryEF\\obj\\",
+        "outputPath": "C:\\Users\\23328\\Desktop\\rbac上传\\RbacAPI\\ClassLibraryEF\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -161,14 +161,14 @@
         }
       }
     },
-    "C:\\Users\\23328\\Desktop\\Rbac\\RbacAPI\\RbacAPI\\RbacAPI.csproj": {
+    "C:\\Users\\23328\\Desktop\\rbac上传\\RbacAPI\\RbacAPI\\RbacAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\23328\\Desktop\\Rbac\\RbacAPI\\RbacAPI\\RbacAPI.csproj",
+        "projectUniqueName": "C:\\Users\\23328\\Desktop\\rbac上传\\RbacAPI\\RbacAPI\\RbacAPI.csproj",
         "projectName": "RbacAPI",
-        "projectPath": "C:\\Users\\23328\\Desktop\\Rbac\\RbacAPI\\RbacAPI\\RbacAPI.csproj",
+        "projectPath": "C:\\Users\\23328\\Desktop\\rbac上传\\RbacAPI\\RbacAPI\\RbacAPI.csproj",
         "packagesPath": "C:\\Users\\23328\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\23328\\Desktop\\Rbac\\RbacAPI\\RbacAPI\\obj\\",
+        "outputPath": "C:\\Users\\23328\\Desktop\\rbac上传\\RbacAPI\\RbacAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -188,14 +188,14 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\23328\\Desktop\\Rbac\\RbacAPI\\Application\\Application.csproj": {
-                "projectPath": "C:\\Users\\23328\\Desktop\\Rbac\\RbacAPI\\Application\\Application.csproj"
+              "C:\\Users\\23328\\Desktop\\rbac上传\\RbacAPI\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\23328\\Desktop\\rbac上传\\RbacAPI\\Application\\Application.csproj"
               },
-              "C:\\Users\\23328\\Desktop\\Rbac\\RbacAPI\\ClassLibraryEF\\ClassLibraryEF.csproj": {
-                "projectPath": "C:\\Users\\23328\\Desktop\\Rbac\\RbacAPI\\ClassLibraryEF\\ClassLibraryEF.csproj"
+              "C:\\Users\\23328\\Desktop\\rbac上传\\RbacAPI\\ClassLibraryEF\\ClassLibraryEF.csproj": {
+                "projectPath": "C:\\Users\\23328\\Desktop\\rbac上传\\RbacAPI\\ClassLibraryEF\\ClassLibraryEF.csproj"
               },
-              "C:\\Users\\23328\\Desktop\\Rbac\\RbacAPI\\Repository\\Repository.csproj": {
-                "projectPath": "C:\\Users\\23328\\Desktop\\Rbac\\RbacAPI\\Repository\\Repository.csproj"
+              "C:\\Users\\23328\\Desktop\\rbac上传\\RbacAPI\\Repository\\Repository.csproj": {
+                "projectPath": "C:\\Users\\23328\\Desktop\\rbac上传\\RbacAPI\\Repository\\Repository.csproj"
               }
             }
           }
@@ -259,14 +259,14 @@
         }
       }
     },
-    "C:\\Users\\23328\\Desktop\\Rbac\\RbacAPI\\Repository\\Repository.csproj": {
+    "C:\\Users\\23328\\Desktop\\rbac上传\\RbacAPI\\Repository\\Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\23328\\Desktop\\Rbac\\RbacAPI\\Repository\\Repository.csproj",
+        "projectUniqueName": "C:\\Users\\23328\\Desktop\\rbac上传\\RbacAPI\\Repository\\Repository.csproj",
         "projectName": "Repository",
-        "projectPath": "C:\\Users\\23328\\Desktop\\Rbac\\RbacAPI\\Repository\\Repository.csproj",
+        "projectPath": "C:\\Users\\23328\\Desktop\\rbac上传\\RbacAPI\\Repository\\Repository.csproj",
         "packagesPath": "C:\\Users\\23328\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\23328\\Desktop\\Rbac\\RbacAPI\\Repository\\obj\\",
+        "outputPath": "C:\\Users\\23328\\Desktop\\rbac上传\\RbacAPI\\Repository\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -286,8 +286,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\23328\\Desktop\\Rbac\\RbacAPI\\ClassLibraryEF\\ClassLibraryEF.csproj": {
-                "projectPath": "C:\\Users\\23328\\Desktop\\Rbac\\RbacAPI\\ClassLibraryEF\\ClassLibraryEF.csproj"
+              "C:\\Users\\23328\\Desktop\\rbac上传\\RbacAPI\\ClassLibraryEF\\ClassLibraryEF.csproj": {
+                "projectPath": "C:\\Users\\23328\\Desktop\\rbac上传\\RbacAPI\\ClassLibraryEF\\ClassLibraryEF.csproj"
               }
             }
           }

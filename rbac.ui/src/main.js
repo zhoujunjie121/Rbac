@@ -5,12 +5,18 @@ import store from './store'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import axios from 'axios';
+import './style.css';
 
-const service=axios.create({
-  baseURL:"https://localhost:44348",
-})
 
-Vue.prototype.$http=service;
+// const service=axios.create({
+//   baseURL:"https://localhost:44348",
+// })
+//Vue.prototype.$http=service;
+
+axios.defaults.baseURL="https://localhost:44348";
+axios.defaults.headers.common['Authorization']=`bearer ${localStorage.getItem("token")}`;
+
+Vue.prototype.$http=axios;
 Vue.use(ElementUI);
 Vue.config.productionTip = false
 

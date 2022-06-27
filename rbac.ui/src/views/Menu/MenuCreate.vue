@@ -18,6 +18,7 @@
   <el-form-item label="菜单链接">
     <el-input v-model="form.menuLink"></el-input>
   </el-form-item>
+
   
   <el-form-item>
     <el-button type="primary" @click="onSubmit">立即创建</el-button>

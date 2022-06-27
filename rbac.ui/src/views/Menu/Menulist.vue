@@ -51,8 +51,8 @@
 </template>
 
 <script>
-import MenuUpd from '@/views/MenuUpd.vue'
-import MeunCreate from '@/views/MenuCreate.vue'; 
+import MenuUpd from '@/views/Menu/MenuUpd.vue'
+import MeunCreate from '@/views/Menu/MenuCreate.vue'; 
   export default {
     components:{
       MeunCreate,

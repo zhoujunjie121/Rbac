@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9X7osb0lEpMje8+eN+EEETgHUkje2qIwX6gqdR7cQ/6uYd5aVC3zLXGeSqBe/X0GXf2C3xCTXlD3MulifY8kIA==",
+  "dgSpecHash": "8SZT5Qsxe0+Wpkhv/brGfPTJcKx1kpSG34Y+bTiiJdDZDQAa+vYjrBjFidbx0kwz3e5d1q8jLa4AUsTvXakrdQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\23328\\Desktop\\Rbac\\RbacAPI\\Application\\Application.csproj",
+  "projectFilePath": "C:\\Users\\23328\\Desktop\\rbac上传\\RbacAPI\\Application\\Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\23328\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
     "C:\\Users\\23328\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",

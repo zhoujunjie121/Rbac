@@ -6,32 +6,46 @@ Vue.use(VueRouter)
 
 const routes = [
   {
+    path: '/admincreate',
+    name: 'admincreate',
+    component: () => import('../views/Admin/admincreate.vue')
+  },
+  {
+    path: '/',
+    name: 'login',
+    component: () => import('../views/login.vue')
+  },
+  {
     path: '/MenuUpd',
     name: 'MenuUpd',
-    component: () => import('../views/MenuUpd.vue')
+    component: () => import('../views/Menu/MenuUpd.vue')
   },
   {
     path: '/MenuCreate',
     name: 'MenuCreate',
-    component: () => import('../views/MenuCreate.vue')
+    component: () => import('../views/Menu/MenuCreate.vue')
   },
+ 
   {
-    path: '/Menulist',
-    name: 'Menulist',
-    component: () => import('../views/Menulist.vue')
-  },
-  {
-    path: '/',
+    path: '/home',
     name: 'home',
     component: HomeView
   },
   {
     path: '/about',
     name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    component: () => import('../views/AboutView.vue'),
+    children:[{
+      path: '/Menulist',
+      name: 'Menulist',
+      component: () => import('../views/Menu/Menulist.vue')
+    },
+    {
+      path: '/adminlist',
+      name: 'adminlist',
+      component: () => import('../views/Admin/adminlist.vue')
+    }
+  ]
   }
 ]
 
