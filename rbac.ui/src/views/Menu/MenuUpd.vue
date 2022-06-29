@@ -5,7 +5,7 @@
 <el-form ref="form" :model="form" label-width="80px">
 
       <el-cascader
-      v-model="form.menuId"
+      v-model="form.pId"
     :options="options"
     :props="{ checkStrictly: true }"
     ref="GetMeId"
@@ -27,8 +27,13 @@
 </el-form>
     </div>
 </template>
+
+
+
+
+
 <script>
-import { Breadcrumb, FormItem } from 'element-ui';
+import { Breadcrumb,FormItem } from 'element-ui';
   export default {
      props:['menuId'],
     data() {
@@ -46,17 +51,18 @@ import { Breadcrumb, FormItem } from 'element-ui';
     methods: {
       onSubmit() {
         this.form.pId=this.$refs["GetMeId"].checkedValue[this.$refs["GetMeId"].checkedValue.length-1];
-        this.form.pId=this.value.slice(-1)[0];
+       // this.form.pId=this.value.slice(-1)[0];
         console.log(this.form);
-        this.$http.post("/api/Menu/AddMenu",this.form).then(res=>{
+        debugger
+        this.$http.post("/api/Menu/MenuUpd",this.form).then(res=>{
             if(res.data>0){
-                this.$message.success("添加成功");
+                this.$message.success("修改成功");
                 this.$emit("routertable",true);
             }
         })
       },
       FanT(){
-        
+       // 
          var id=this.form.menuId;
          debugger
          this.$http.get("/api/Menu/GetBity?id="+id).then(res=>{
@@ -65,7 +71,7 @@ import { Breadcrumb, FormItem } from 'element-ui';
          })
       },
        Menu(){
-        this.form=[];
+        //this.form=[];
         this.$http.get("/api/Menu/QueryCreateMeun").then(res=>{
             var reg = new RegExp('\\,"children":\\[]', 'g');
              

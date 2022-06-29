@@ -15,6 +15,8 @@ namespace Application
             CreateMap<Menu, MenuAddDto>();
             CreateMap<RoleCreateDto,Role>().ReverseMap();
             CreateMap<AdminDto,Admin>().ReverseMap();
+            CreateMap<MenuListDto, Menu>().ReverseMap();
+            //CreateMap <List<AdminListDto>, List<Admin>>().ReverseMap();
         }
     }
 }

@@ -15,5 +15,10 @@ namespace Application
         public string MenuLink { get; set; }
 
        public int PId { get; set; }
+       public virtual bool IsShow { get; set; }
+    }
+    public class MenuListDto : MenuAddDto
+    {
+        public override bool IsShow { get; set; }
     }
 }

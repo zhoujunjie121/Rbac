@@ -73,9 +73,9 @@ namespace RbacAPI.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        public List<Admin> GetQuery()
+        public PageResult<AdminListDto> GetQuery([FromQuery]Result dto)
         {
-            return adminService.Query();
+            return adminService.GetAdmin(dto);
         }
 
     }

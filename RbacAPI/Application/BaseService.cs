@@ -63,7 +63,7 @@ namespace Application
         /// </summary>
         /// <param name="dto"></param>
         /// <returns></returns>
-        public int Update(TDto dto)
+        public virtual int Update(TDto dto)
         {
             return repository.UpdInfo(mapper.Map<TEntity>(dto));
         }

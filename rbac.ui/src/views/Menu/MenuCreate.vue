@@ -19,6 +19,11 @@
     <el-input v-model="form.menuLink"></el-input>
   </el-form-item>
 
+  <el-switch
+  v-model="isShow"
+  inactive-text="按年付费">
+</el-switch>
+
   
   <el-form-item>
     <el-button type="primary" @click="onSubmit">立即创建</el-button>
@@ -38,7 +43,8 @@ import { FormItem } from 'element-ui';
             menuLink:'',
         },
         value:[],
-        options: []
+        options: [],
+        isShow:false,
       }
     },
     methods: {

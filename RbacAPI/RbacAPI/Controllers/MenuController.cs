@@ -76,5 +76,15 @@ namespace RbacAPI.Controllers
         {
             return menuService.MenuUpd(menu);
         }
+
+        /// <summary>
+        /// 菜单布局
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        public List<MenuListDto> QueryMenuList()
+        {
+            return menuService.QueryMenuList();
+        }
     }
 }

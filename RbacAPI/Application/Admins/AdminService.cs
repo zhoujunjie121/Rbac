@@ -99,6 +99,17 @@ namespace Application
         }
 
         /// <summary>
+        /// 修改用户
+        /// </summary>
+        /// <param name="dto"></param>
+        /// <returns></returns>
+        public override int Update(AdminDto dto)
+        {
+            dto.Password = Md5(dto.Password);
+            return base.Update(dto);
+        }
+
+        /// <summary>
         /// MD5加密
         /// </summary>
         /// <param name="val"></param>
@@ -106,6 +117,26 @@ namespace Application
         private string Md5(string val)
         {
             return string.Join("", MD5.Create().ComputeHash(Encoding.UTF8.GetBytes(val)).Select(x => x.ToString("x2")));
+        }
+
+        /// <summary>
+        /// 列表分页
+        /// </summary>
+        /// <returns></returns>
+        public PageResult<AdminListDto> GetAdmin(Result dto)
+        {
+            var list= repository.QueryAll();
+            //list.CreateTime = list.CreateTime.ToString("yyyy-MM-dd");
+            //总条数
+            PageResult<AdminListDto> result = new PageResult<AdminListDto>();
+            result.totalCount = list.Count();
+            //总页数
+            int pageCount = (int)Math.Ceiling(result.totalCount * 1.0 / dto.pageSize);
+            //分页
+            var query = list.OrderBy(t => t.AdminId).Skip((dto.pageIndex - 1) * dto.pageSize).Take(dto.pageSize).ToList();
+            //result.Data = mapper.Map<List<AdminListDto>>(query);
+            
+            return result;
         }
 
     }

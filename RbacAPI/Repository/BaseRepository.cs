@@ -51,7 +51,7 @@ namespace Repository
         /// <returns></returns>
         public int UpdInfo(TEntity t)
         {
-            myDbContext.Entry(t).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+            myDbContext.Entry<TEntity>(t).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
             return myDbContext.SaveChanges();
         }
 

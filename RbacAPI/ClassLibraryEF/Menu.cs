@@ -21,5 +21,6 @@ namespace ClassLibraryEF
         /// 菜单链接
         /// </summary>
         public string MenuLink { get; set; }
+        public bool IsShow { get; set; }
     }
 }

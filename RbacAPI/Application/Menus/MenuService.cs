@@ -22,6 +22,15 @@ namespace Application
             this.menuRepository = menuRepository;
             this.mapper = mapper;
         }
+
+        /// <summary>
+        /// 菜单布局
+        /// </summary>
+        /// <returns></returns>
+        public List<MenuListDto> QueryMenuList()
+        {
+            return mapper.Map<List<MenuListDto>>(menuRepository.QueryAll());
+        }
         public List<MenuDto> QueryAll()
         {
             var list=menuRepository.QueryAll();
@@ -134,6 +143,8 @@ namespace Application
         {
             return menuRepository.UpdInfo(new Menu
             {
+                IsShow=menu.IsShow,
+                MenuId = menu.MenuId,
                 MenuLink = menu.MenuLink,
                 MenuName = menu.MenuName,
                 PId = menu.PId,

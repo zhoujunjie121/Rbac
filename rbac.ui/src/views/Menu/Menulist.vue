@@ -39,11 +39,11 @@
   </el-table>
 
 
-  <el-dialog title="新增菜单" :visible.sync="dialogTableVisible">
+  <el-dialog title="新增菜单" :key="new Date().getTime()" :visible.sync="dialogTableVisible">
         <meun-create @routertable="routertable"></meun-create>
   </el-dialog>
 
-   <el-dialog title="编辑菜单" :visible.sync="dialogTableVisibleUpd">
+   <el-dialog title="编辑菜单" :key="new Date().getTime()" :visible.sync="dialogTableVisibleUpd">
        <menu-upd @updtable="updtable" :menuId=editid></menu-upd>
   </el-dialog>
 

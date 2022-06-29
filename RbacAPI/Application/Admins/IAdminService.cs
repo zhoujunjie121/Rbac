@@ -11,5 +11,6 @@ namespace Application
     {
         ResultDto CreateAdmin(AdminDto dto);
         TokenDto GetLogin(LoginDto dto);
+        PageResult<AdminListDto> GetAdmin(Result dto);
     }
 }

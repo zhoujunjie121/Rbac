@@ -14,5 +14,7 @@ namespace Application
 
         int MenuUpd(MenuAddDto menu);
 
+        List<MenuListDto> QueryMenuList();
+
     }
 }

@@ -5,31 +5,32 @@
       <el-container>
         <el-aside width="200px">
            <el-menu
-      default-active="2"
+      default-active="/menulist"
       class="el-menu-vertical-demo"
       @open="handleOpen"
       @close="handleClose"
       background-color="#545c64"
       text-color="#fff"
       active-text-color="#ffd04b"
-      :router="true">
-      <el-submenu index="1">
+      :router="true" :unique-opened="false">
+      <el-submenu :index="item.menuLink" v-for="item in MenuList" :key="item.menuId">
         <template slot="title">
           <i class="el-icon-location"></i>
-          <span>导航一</span>
+          <span>{{item.menuName}}</span>
         </template>
-        <el-menu-item-group>
-          <template slot="title">分组一</template>
-          <el-menu-item index="/menulist">菜单管理</el-menu-item>
-          <el-menu-item index="1-2">选项2</el-menu-item>
+
+        <el-menu-item-group >
+        <!--   <el-menu-item v-for="iteme in tableData.filter(t=>t.pId==item.menuId)" :key="iteme.menuId">
+      </el-menu-item> -->
+      <template v-for="iteme in tableData.filter(t=>t.pId==item.menuId)">
+
+          <el-menu-item :index="menuitem.menuLink" v-for="menuitem in tableData.filter(t=>t.pId==iteme.menuId && t.isShow)" :key="menuitem.menuId">
+            {{menuitem.menuName}}
+            </el-menu-item>
+      </template>
+          
         </el-menu-item-group>
-        <el-menu-item-group title="分组2">
-          <el-menu-item index="1-3">选项3</el-menu-item>
-        </el-menu-item-group>
-        <el-submenu index="1-4">
-          <template slot="title">选项4</template>
-          <el-menu-item index="1-4-1">选项1</el-menu-item>
-        </el-submenu>
+
       </el-submenu>
     </el-menu>
         </el-aside>
@@ -55,8 +56,23 @@
       },
       handleClose(key, keyPath) {
         console.log(key, keyPath);
+      },
+      menu(){
+        this.$http.get("/api/menu/QueryMenuList").then(res=>{
+            this.tableData=res.data;
+            console.log(this.tableData);
+        })
       }
+    },
+    created(){
+      this.menu();
+    },
+    computed:{
+      MenuList(){
+        return this.tableData.filter(t=>t.pId==0)
+      },
     }
+    
   }
 </script>
 
