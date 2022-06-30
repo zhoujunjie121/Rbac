@@ -20,8 +20,8 @@
   </el-form-item>
 
   <el-switch
-  v-model="isShow"
-  inactive-text="按年付费">
+  v-model="form.isShow"
+  inactive-text="是否显示">
 </el-switch>
 
   
@@ -41,10 +41,10 @@ import { FormItem } from 'element-ui';
             pId:null,
             menuName:'',
             menuLink:'',
+            isShow:false,
         },
         value:[],
         options: [],
-        isShow:false,
       }
     },
     methods: {

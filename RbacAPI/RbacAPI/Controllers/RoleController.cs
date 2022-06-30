@@ -54,6 +54,17 @@ namespace RbacAPI.Controllers
             return roleService.Query();
         }
 
+        /// <summary>
+        /// 权限分配
+        /// </summary>
+        /// <param name="dto"></param>
+        /// <returns></returns>
+        [HttpPost]
+        public int CreateRoleMenu(MenuRoleDto dto)
+        {
+            return roleService.CreateRoleMenu(dto);
+        }
+
 
     }
 }

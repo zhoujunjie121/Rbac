@@ -9,6 +9,6 @@ namespace Application
 {
     public interface IRoleService:IBaseService<Role, RoleCreateDto>
     {
-
+        int CreateRoleMenu(MenuRoleDto dto);
     }
 }

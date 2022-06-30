@@ -17,11 +17,11 @@ namespace Application
 {
     public class AdminService : BaseService<Admin, AdminDto>,IAdminService
     {
-        private readonly IAdminRepoitstory repository;
+        private readonly IAdminRepository repository;
         private readonly IMapper mapper;
         private readonly IConfiguration configuration;
 
-        public AdminService(IAdminRepoitstory repository, IMapper mapper, IConfiguration configuration) : base(repository, mapper)
+        public AdminService(IAdminRepository repository, IMapper mapper, IConfiguration configuration) : base(repository, mapper)
         {
             this.repository = repository;
             this.mapper = mapper;
@@ -125,17 +125,23 @@ namespace Application
         /// <returns></returns>
         public PageResult<AdminListDto> GetAdmin(Result dto)
         {
-            var list= repository.QueryAll();
-            //list.CreateTime = list.CreateTime.ToString("yyyy-MM-dd");
+            var list= repository.QueryAll().AsQueryable();
             //总条数
             PageResult<AdminListDto> result = new PageResult<AdminListDto>();
             result.totalCount = list.Count();
             //总页数
             int pageCount = (int)Math.Ceiling(result.totalCount * 1.0 / dto.pageSize);
+            if (dto.pageIndex > pageCount)
+            {
+                dto.pageIndex = 1;
+            }
             //分页
             var query = list.OrderBy(t => t.AdminId).Skip((dto.pageIndex - 1) * dto.pageSize).Take(dto.pageSize).ToList();
-            //result.Data = mapper.Map<List<AdminListDto>>(query);
-            
+            result.Data = mapper.Map<List<AdminListDto>>(query);
+            foreach (var item in result.Data)
+            {
+                item.CreateTime = string.Format("{0:yyyy-MM-dd}",Convert.ToDateTime(item.CreateTime));
+            }
             return result;
         }
 

@@ -100,6 +100,12 @@ namespace Repository
             return list;
         }
 
+        public IQueryable<TEntity> pageList()
+        {
+            var list = myDbContext.Set<TEntity>().AsQueryable();
+            return list;
+        }
+
         /// <summary>
         /// 获取全部数据
         /// </summary>

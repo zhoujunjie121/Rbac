@@ -6,6 +6,11 @@ Vue.use(VueRouter)
 
 const routes = [
   {
+    path: '/Menutree',
+    name: 'Menutree',
+    component: () => import('../views/Role/Menutree.vue')
+  },
+  {
     path: '/admincreate',
     name: 'admincreate',
     component: () => import('../views/Admin/admincreate.vue')
@@ -44,6 +49,11 @@ const routes = [
       path: '/adminlist',
       name: 'adminlist',
       component: () => import('../views/Admin/adminlist.vue')
+    },
+    {
+      path: '/Rolelist',
+      name: 'Rolelist',
+      component: () => import('../views/Role/Rolelist.vue')
     }
   ]
   }

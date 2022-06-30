@@ -12,11 +12,11 @@ namespace Application
     {
         public AutomapperConfig()
         {
-            CreateMap<Menu, MenuAddDto>();
+            CreateMap<MenuAddDto,Menu>().ReverseMap();
             CreateMap<RoleCreateDto,Role>().ReverseMap();
             CreateMap<AdminDto,Admin>().ReverseMap();
             CreateMap<MenuListDto, Menu>().ReverseMap();
-            //CreateMap <List<AdminListDto>, List<Admin>>().ReverseMap();
+            CreateMap <Admin, AdminListDto>();
         }
     }
 }

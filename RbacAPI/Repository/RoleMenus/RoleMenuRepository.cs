@@ -1,16 +1,16 @@
-﻿using ClassLibraryEF;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ClassLibraryEF;
 
 namespace Repository
 {
-    public class AdminRepository : BaseRepository<Admin, int>, IAdminRepository
+    public class RoleMenuRepository : BaseRepository<RoleMenu, int>, IRoleMenuRepository
     {
 
-        public AdminRepository(MyDbContext myDbContext)
+        public RoleMenuRepository(MyDbContext myDbContext)
         {
             this.myDbContext = myDbContext;
         }

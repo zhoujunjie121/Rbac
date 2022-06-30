@@ -18,5 +18,6 @@ namespace Repository
         IQueryable<TEntity> GetQuery(Expression<Func<TEntity, bool>> predicate);
         List<TEntity> QueryAll();
         int UpdInfo(TEntity t);
+        IQueryable<TEntity> pageList();
     }
 }

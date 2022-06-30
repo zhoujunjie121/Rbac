@@ -19,6 +19,6 @@ namespace Application
     }
     public class MenuListDto : MenuAddDto
     {
-        public override bool IsShow { get; set; }
+       public override bool IsShow { get; set; }
     }
 }

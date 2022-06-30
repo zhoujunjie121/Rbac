@@ -100,7 +100,7 @@
     background-color: #E9EEF3;
     color: #333;
     text-align: center;
-    line-height: 160px;
+    line-height: 60px;
     height:calc(100vh - 60px);
   }
   

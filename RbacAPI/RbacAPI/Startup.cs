@@ -55,8 +55,9 @@ namespace RbacAPI
             services.AddScoped<IMenuRepository, MenuRepository>();
             services.AddScoped<IRoleService, RoleService>();
             services.AddScoped<IRolerepository, Rolerepository>();
+            services.AddScoped<IRoleMenuRepository, RoleMenuRepository>();
             services.AddScoped<IAdminService, AdminService>();
-            services.AddScoped<IAdminRepoitstory, AdminRepository>();
+            services.AddScoped<IAdminRepository, AdminRepository>();
 
 
             services.AddAuthentication(option =>
