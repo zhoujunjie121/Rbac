@@ -12,6 +12,12 @@
                 <el-form-item label="密码" prop="password">
                     <el-input type="password" v-model="ruleForm.password" autocomplete="off"></el-input>
                 </el-form-item>
+
+                <el-form-item label="验证码">
+                    <el-input disabled v-model="ruleForm.verification1"></el-input>
+                    <el-input v-model="ruleForm.verification2"></el-input>
+                    <el-link type="primary" @click="refreshCode">刷新验证码</el-link>
+                </el-form-item>
                 
                 <el-form-item>
                     <el-button type="primary" @click="onSubmit">登录</el-button>
@@ -28,6 +34,8 @@
         ruleForm: {
           userName: '',
           password: '',
+          verification1:'',
+          verification2:'',
         },
         rules: {
           userName: [
@@ -43,6 +51,11 @@
     },
     methods: {
         onSubmit(){
+          if(this.ruleForm.verification1!=this.ruleForm.verification2){
+            this.$message.error(("验证码不正确，请重新输入"));
+            this.refreshCode();
+            return;
+          }
             this.$http.get("/api/Admin/GetLogin",{params:this.ruleForm}).then(res=>{
                 if(res.data.code>0){
                     this.$message.error(res.data.msg)
@@ -55,7 +68,15 @@
         },
       Admin(){
         this.$router.push("/admincreate");
+      },
+      refreshCode(){
+        this.$http.get("/api/Admin/verificationcode").then(res=>{
+          this.ruleForm.verification1=res.data;
+        })
       }
+    },
+    created(){
+      this.refreshCode();
     }
   }
 </script>

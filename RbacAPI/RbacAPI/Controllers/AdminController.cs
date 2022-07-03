@@ -2,6 +2,7 @@
 using ClassLibraryEF;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 
 namespace RbacAPI.Controllers
@@ -27,6 +28,19 @@ namespace RbacAPI.Controllers
         {
             return adminService.GetLogin(dto);
         }
+
+        /// <summary>
+        /// 生成验证码
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        public int verificationcode()
+        {
+            Random random = new Random();
+            var code = random.Next(1000, 9999);
+            return code;
+        }
+
 
         /// <summary>
         /// 注册用户

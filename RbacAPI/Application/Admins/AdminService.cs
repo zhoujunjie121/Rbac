@@ -28,6 +28,8 @@ namespace Application
             this.configuration = configuration;
         }
 
+
+
         public TokenDto GetLogin(LoginDto dto)
         {
             var query = repository.GetList(t => t.UserName == dto.UserName).FirstOrDefault();

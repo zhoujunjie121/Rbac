@@ -5,7 +5,7 @@
 <el-form ref="form" :model="form" label-width="80px">
 
   <el-form-item label="用户名">
-    <el-input v-model="form.userName" readonly="true"></el-input>
+    <el-input v-model="form.userName" :readonly="true"></el-input>
   </el-form-item>
 
 
@@ -28,9 +28,11 @@
 
 <script>
   export default {
+    props:['AdminId'],
     data() {
       return {
         form: {
+          AdminId:this.AdminId,
           userName:'',
           password:'',
           email:'',
@@ -39,8 +41,23 @@
     },
     methods: {
       onSubmit() {
-        console.log('submit!');
+        ///api/Admin/Update
+        this.$http.post("/api/Admin/Update",this.form).then(res=>{
+          if(res.data>0){
+            this.$message.success("修改成功");
+            this.$emit("Adminupd",true)
+          }
+        })
+      },
+      Fan(){
+        var id=this.form.AdminId;
+        this.$http.get("/api/Admin/GetAdmin?id="+id).then(res=>{
+          this.form=res.data;
+        })
       }
+    },
+    created(){
+      this.Fan();
     }
   }
 </script>
