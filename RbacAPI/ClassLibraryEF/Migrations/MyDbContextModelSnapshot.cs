@@ -135,7 +135,7 @@ namespace ClassLibraryEF.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("AdmimId")
+                    b.Property<int>("AdminId")
                         .HasColumnType("int");
 
                     b.Property<int>("RoleId")
@@ -143,7 +143,7 @@ namespace ClassLibraryEF.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("AdmimId");
+                    b.HasIndex("AdminId");
 
                     b.HasIndex("RoleId");
 
@@ -169,18 +169,18 @@ namespace ClassLibraryEF.Migrations
 
                     b.HasIndex("RoleId");
 
-                    b.ToTable("RoleMeun");
+                    b.ToTable("RoleMenu");
                 });
 
             modelBuilder.Entity("ClassLibraryEF.RoleAdmin", b =>
                 {
-                    b.HasOne("ClassLibraryEF.Role", null)
-                        .WithMany()
-                        .HasForeignKey("AdmimId")
+                    b.HasOne("ClassLibraryEF.Admin", null)
+                        .WithMany("RoleAdmin")
+                        .HasForeignKey("AdminId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("ClassLibraryEF.Admin", null)
+                    b.HasOne("ClassLibraryEF.Role", null)
                         .WithMany()
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -200,6 +200,11 @@ namespace ClassLibraryEF.Migrations
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("ClassLibraryEF.Admin", b =>
+                {
+                    b.Navigation("RoleAdmin");
                 });
 #pragma warning restore 612, 618
         }

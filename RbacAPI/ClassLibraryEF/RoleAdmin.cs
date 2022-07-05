@@ -11,10 +11,9 @@ namespace ClassLibraryEF
     /// <summary>
     /// 管理员角色关系表
     /// </summary>
-    [Table("RoleAdmin")]
     public class RoleAdmin
     {
-        [Key]
+
         public int Id { get; set; }
         /// <summary>
         /// 角色表
@@ -23,7 +22,7 @@ namespace ClassLibraryEF
         /// <summary>
         /// 管理员表
         /// </summary>
-        public int AdmimId { get; set; } 
+        public int AdminId { get; set; } 
 
     }
 }

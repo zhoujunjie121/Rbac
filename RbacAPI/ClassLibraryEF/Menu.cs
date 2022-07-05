@@ -4,10 +4,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace ClassLibraryEF
 {
-    [Table("Menu")]
     public class Menu:BaseInfo
     {
-        [Key]
         public int MenuId { get; set; }
         /// <summary>
         /// 菜单名称

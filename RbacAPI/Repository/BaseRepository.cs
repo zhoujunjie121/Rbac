@@ -85,7 +85,7 @@ namespace Repository
         public int Deletelame(Expression<Func<TEntity, bool>> predicate)
         {
             var list = myDbContext.Set<TEntity>().Where(predicate);
-            myDbContext.Remove(list);
+            myDbContext.RemoveRange(list);
             return myDbContext.SaveChanges();
         }
 

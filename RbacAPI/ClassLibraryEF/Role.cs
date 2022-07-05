@@ -11,10 +11,8 @@ namespace ClassLibraryEF
     /// <summary>
     /// 角色表
     /// </summary>
-    [Table("Role")]
     public class Role:BaseInfo
     {
-        [Key]
         public int RoleId { get; set; }
         /// <summary>
         /// 角色名称

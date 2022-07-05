@@ -20,6 +20,17 @@
     <el-input v-model="ruleForm.email"></el-input>
   </el-form-item>
 
+  <el-form-item label="角色">
+   <el-select v-model="ruleForm.roleId" multiple placeholder="请选择">
+    <el-option
+      v-for="item in options"
+      :key="item.roleId"
+      :label="item.roleName"
+      :value="item.roleId">
+    </el-option>
+  </el-select>
+  </el-form-item>
+
  <el-form-item>
     <el-button type="primary" @click="submitForm()">注册</el-button>
     <el-button @click="resetForm('ruleForm')">重置</el-button>
@@ -35,15 +46,17 @@
   export default {
     data() {
       return {
+        
         ruleForm: {
           userName:'',
           password:'',
           email:'',
+          roleId:0,
         },
         rules: {
           userName: [
             { required: true, message: '请输入用户名', trigger: 'blur' },
-            { min: 3, max: 5, message: '长度在 3 到 10 个字符', trigger: 'blur' }
+            { min: 3, max: 10, message: '长度在 3 到 10 个字符', trigger: 'blur' }
           ],
           password: [
             { required: true, message: '请输入密码', trigger: 'change' }
@@ -52,21 +65,31 @@
           email: [
             { required: true, message: '请输入邮箱', trigger: 'change' }
           ],
-        }
+        },
+        options:[],
       };
     },
     methods: {
-         submitForm(){
-            this.$http.post("/api/Admin/Create",this.ruleForm).then(res=>{
-                if(res.data.code>0){
-                    this.$message.error(res.data.msg);
-                }
-                else{
-                    this.$message.success(res.data.msg);
-                    this.$router.push("/");
-                }
-            })
-         }
+        submitForm(){
+          this.$http.post("/api/Admin/Create",this.ruleForm).then(res=>{
+              if(res.data.code>0){
+                  this.$message.error(res.data.msg);
+              }
+              else{
+                  this.$message.success(res.data.msg);
+                  this.$router.push("/");
+              }
+          })
+        },
+        show(){
+          this.$http.get("/api/Role/Query").then(res=>{
+            this.options=res.data;
+            console.log(res);
+          })
+        }
+    },
+    created(){
+      this.show();
     }
   }
 </script>

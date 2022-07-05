@@ -45,7 +45,8 @@
   </el-table>
   
 <el-dialog title="权限分配" :visible.sync="dialogTableVisible">
-    <menu-tree ref="dialogmenu"></menu-tree>
+    <menu-tree ref="dialogmenu" :RoleIds=roleId></menu-tree>
+
      <span slot="footer" class="dialog-footer">
     <el-button @click="dialogTableVisible = false">取 消</el-button>
     <el-button type="primary" @click="Save()">确 定</el-button>
@@ -81,11 +82,12 @@ import MenuTree from '@/views/Role/Menutree.vue'
         },
         authority(id){
             this.roleId=id;
-            console.log(id);
+            console.log(this.roleId);
             this.dialogTableVisible=true;
         },
         Save(){
-            console.log(this.$refs.dialogmenu.$refs.Menutree.getCheckedNodes(true,true).map(t=>t.value));
+          debugger
+            // console.log(this.$refs.dialogmenu.$refs.Menutree.getCheckedNodes(true,true).map(t=>t.value));
             var form={
                 roleId:this.roleId,
                 menuId:this.$refs.dialogmenu.$refs.Menutree.getCheckedNodes(true,true).map(t=>t.value),

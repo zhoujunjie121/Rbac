@@ -94,7 +94,11 @@ namespace Application
             dto.Password = Md5(dto.Password);
             dto.CreateTime = DateTime.Now;
             dto.LastLoginTime = null;
-             repository.AddInfo(mapper.Map<Admin>(dto));
+            var Entity = mapper.Map<Admin>(dto);
+             repository.AddInfo(Entity);
+
+
+
             result.Code = 0;
             result.msg = "注册成功";
             return result;

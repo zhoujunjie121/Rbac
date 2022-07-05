@@ -42,12 +42,20 @@ namespace RbacAPI.Controllers
         {
             return roleService.Find(id);
         }
-
+        /// <summary>
+        /// 角色修改
+        /// </summary>
+        /// <param name="dto"></param>
+        /// <returns></returns>
         [HttpPost]
         public int Update(RoleCreateDto dto)
         {
             return roleService.Update(dto);
         }
+        /// <summary>
+        /// 角色列表
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public List<Role> Query()
         {
@@ -65,6 +73,16 @@ namespace RbacAPI.Controllers
             return roleService.CreateRoleMenu(dto);
         }
 
+        /// <summary>
+        /// 权限分配查询
+        /// </summary>
+        /// <param name="RoleId"></param>
+        /// <returns></returns>
+        [HttpGet]
+        public List<MenuRoleByIdDto> GetRoleMenuById(int RoleId)
+        {
+            return roleService.GetRoleMenuById(RoleId);
+        }
 
     }
 }

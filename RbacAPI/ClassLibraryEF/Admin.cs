@@ -11,10 +11,8 @@ namespace ClassLibraryEF
     /// <summary>
     /// 管理员
     /// </summary>
-    [Table("Admin")]
     public class Admin:BaseInfo
     {
-        [Key]
         public int AdminId { get; set; }
         /// <summary>
         /// 管理员账号
@@ -34,6 +32,9 @@ namespace ClassLibraryEF
         ///是否锁定
         ///</summary>
         public Boolean IsLock { get; set; }
-
+        /// <summary>
+        /// 多个角色  使用list创建一个外键
+        /// </summary>
+        public List<RoleAdmin> RoleAdmin { get; set; }
     }
 }

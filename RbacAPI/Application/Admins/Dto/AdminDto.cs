@@ -25,6 +25,15 @@ namespace Application
         /// </summary>
         public DateTime CreateTime { get; set; }
         public DateTime? LastLoginTime { get; set; }
+        /// <summary>
+        /// 多个角色
+        /// </summary>
+        public int[] RoleId { get; set; }
+
+        /// <summary>
+        /// 多个角色
+        /// </summary>
+        public List<AdminRoleDto> AdminRoleDto { get; set; }
 
     }
 }

@@ -1,5 +1,6 @@
 <template>
   <div>
+    <el-button type="success" @click="add">添加</el-button>
     <el-table :data="tableData" style="width: 100%">
       <el-table-column prop="userName" label="用户名" width="180">
       </el-table-column>
@@ -121,6 +122,9 @@ export default {
             message: '已取消删除'
           });          
         });
+    },
+    add(){
+      this.$router.push("/admincreate");
     }
   },
   created() {

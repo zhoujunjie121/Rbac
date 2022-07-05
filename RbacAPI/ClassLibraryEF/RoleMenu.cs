@@ -11,10 +11,8 @@ namespace ClassLibraryEF
     /// <summary>
     /// 角色菜单关系表
     /// </summary>
-    [Table("RoleMeun")]
     public class RoleMenu
     {
-        [Key]
         public int Id { get; set; }
         /// <summary>
         /// 菜单表
