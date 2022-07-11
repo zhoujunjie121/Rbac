@@ -46,12 +46,17 @@
   export default {
     data() {
       return {
-        
+       
         ruleForm: {
           userName:'',
           password:'',
           email:'',
           roleId:0,
+          // RoleAdmin:[{
+          //   id:0,
+          //   roleId:0,
+          //   adminId:0,
+          // }]
         },
         rules: {
           userName: [
@@ -71,6 +76,7 @@
     },
     methods: {
         submitForm(){
+          console.log(this.ruleForm);
           this.$http.post("/api/Admin/Create",this.ruleForm).then(res=>{
               if(res.data.code>0){
                   this.$message.error(res.data.msg);

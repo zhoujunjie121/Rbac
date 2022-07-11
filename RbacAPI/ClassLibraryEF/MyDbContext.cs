@@ -39,7 +39,7 @@ namespace ClassLibraryEF
             });
             modelBuilder.Entity<RoleAdmin>(t =>
             {
-                //t.HasOne<Admin>().WithMany().HasForeignKey(k => k.AdmimId);
+                t.HasOne<Admin>().WithMany().HasForeignKey(k => k.AdminId);
                 t.HasOne<Role>().WithMany().HasForeignKey(k => k.RoleId);
             });
             modelBuilder.Entity<RoleMenu>(t =>
@@ -48,6 +48,7 @@ namespace ClassLibraryEF
                 t.HasOne<Menu>().WithMany().HasForeignKey(k => k.MenuId);
             });
         }
+
 
        
     }

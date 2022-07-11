@@ -33,7 +33,7 @@ namespace Application
         /// <summary>
         /// 多个角色
         /// </summary>
-        public List<AdminRoleDto> AdminRoleDto { get; set; }
+        //public List<AdminRoleDto> RoleAdmin { get; set; }
 
     }
 }

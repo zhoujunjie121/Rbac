@@ -35,6 +35,6 @@ namespace ClassLibraryEF
         /// <summary>
         /// 多个角色  使用list创建一个外键
         /// </summary>
-        public List<RoleAdmin> RoleAdmin { get; set; }
+       // public List<RoleAdmin> RoleAdmin { get; set; }
     }
 }

@@ -22,9 +22,9 @@
         <el-menu-item-group >
         <!--   <el-menu-item v-for="iteme in tableData.filter(t=>t.pId==item.menuId)" :key="iteme.menuId">
       </el-menu-item> -->
-      <template v-for="iteme in tableData.filter(t=>t.pId==item.menuId)">
+      <template v-for="iteme in tableData.filter(iteme=>iteme.pId==item.menuId)">
 
-          <el-menu-item :index="menuitem.menuLink" v-for="menuitem in tableData.filter(t=>t.pId==iteme.menuId && t.isShow)" :key="menuitem.menuId">
+          <el-menu-item :index="menuitem.menuLink" v-for="menuitem in tableData.filter(menuitem=>menuitem.pId==iteme.menuId && menuitem.isShow)" :key="menuitem.menuId">
             {{menuitem.menuName}}
             </el-menu-item>
       </template>

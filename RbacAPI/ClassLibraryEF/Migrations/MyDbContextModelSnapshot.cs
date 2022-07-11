@@ -175,7 +175,7 @@ namespace ClassLibraryEF.Migrations
             modelBuilder.Entity("ClassLibraryEF.RoleAdmin", b =>
                 {
                     b.HasOne("ClassLibraryEF.Admin", null)
-                        .WithMany("RoleAdmin")
+                        .WithMany()
                         .HasForeignKey("AdminId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -200,11 +200,6 @@ namespace ClassLibraryEF.Migrations
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("ClassLibraryEF.Admin", b =>
-                {
-                    b.Navigation("RoleAdmin");
                 });
 #pragma warning restore 612, 618
         }

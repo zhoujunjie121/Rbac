@@ -20,6 +20,8 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Swashbuckle.AspNetCore.Filters;
+using Microsoft.AspNetCore.StaticFiles.Infrastructure;
+using Microsoft.Extensions.FileProviders;
 
 namespace RbacAPI
 {
@@ -58,6 +60,7 @@ namespace RbacAPI
             services.AddScoped<IRoleMenuRepository, RoleMenuRepository>();
             services.AddScoped<IAdminService, AdminService>();
             services.AddScoped<IAdminRepository, AdminRepository>();
+            services.AddScoped<IRoleAdminRepository, RoleAdminRepository>();
 
 
             services.AddAuthentication(option =>
@@ -122,6 +125,14 @@ namespace RbacAPI
             app.UseHttpsRedirection();
 
             app.UseRouting();
+            //静态文件
+            /*var path = env.ContentRootPath + @"files";
+            SharedOptions s1 = new SharedOptions();
+            s1.FileProvider = new PhysicalFileProvider(path);
+            s1.RequestPath = "/refile";
+            StaticFileOptions s0 = new StaticFileOptions(s1);
+
+            app.UseStaticFiles(s0);*/
 
             app.UseCors("cors");
             //认证

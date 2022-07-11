@@ -20,12 +20,14 @@ namespace Application
         private readonly IAdminRepository repository;
         private readonly IMapper mapper;
         private readonly IConfiguration configuration;
+        private readonly IRoleAdminRepository roleAdminRepository;
 
-        public AdminService(IAdminRepository repository, IMapper mapper, IConfiguration configuration) : base(repository, mapper)
+        public AdminService(IAdminRepository repository, IMapper mapper, IConfiguration configuration,IRoleAdminRepository roleAdminRepository) : base(repository, mapper)
         {
             this.repository = repository;
             this.mapper = mapper;
             this.configuration = configuration;
+            this.roleAdminRepository = roleAdminRepository;
         }
 
 
@@ -94,11 +96,18 @@ namespace Application
             dto.Password = Md5(dto.Password);
             dto.CreateTime = DateTime.Now;
             dto.LastLoginTime = null;
+
+
             var Entity = mapper.Map<Admin>(dto);
+
              repository.AddInfo(Entity);
 
-
-
+            var list = dto.RoleId.Select(t => new RoleAdmin
+            {
+                RoleId = t,
+                AdminId = Entity.AdminId,
+            }).ToList();
+            roleAdminRepository.AddAll(list);
             result.Code = 0;
             result.msg = "注册成功";
             return result;
